@@ -1,4 +1,4 @@
-hatchDat =read.csv(file="~/Google Drive/Projects/ChinookEggExperiment/PNAS/Data/HatchDayData.csv",sep=";")
+hatchDat =read.csv(file="~/Google Drive/Projects/ChinookEggExperiment/Final/Data/HatchDayData.csv",sep=";")
 meanhatchDat <-aggregate(hatchDat, by=list(hatchDat$RepNumber),FUN=mean, na.rm=TRUE)
 meanhatchDat$PeriodNames<-"Early"
 meanhatchDat$PeriodNames[meanhatchDat $DevPeriod==2]<-"Mid"
