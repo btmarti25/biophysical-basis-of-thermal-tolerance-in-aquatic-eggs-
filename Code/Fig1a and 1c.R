@@ -6,7 +6,7 @@ library(plotrix)
 #setwd('/Users/benjamin')
 #setwd("/Volumes/LaCie/")
 #load in csv with trial info
-df <- read.csv(file = "~/Google Drive/Projects/ChinookEggExperiment/PNAS/Data/RespTrialData.csv")
+df <- read.csv(file = "~/Google Drive/Projects/ChinookEggExperiment/Final/Data/RespTrialData.csv")
 names(df)[1]<-"FileName"
 
 alldat = 0
@@ -22,7 +22,7 @@ for (j in 1:15) {
 	x <- toString(df$blanks[trial_N])
 	blanks <- as.list(strsplit(x, ",")[[1]])
 	#setwd("/Users/benjamin/Google Drive/Projects/ChinookEggExperiment/Respirometry/MicroResp Data For analysis/")
-	setwd("~/Google Drive/Projects/ChinookEggExperiment/PNAS/Data/MicroResp Data For analysis/")
+	setwd("~/Google Drive/Projects/ChinookEggExperiment/Final/Data/MicroResp Data For analysis/")
 	dat <- read.csv(file = filename, header = T)
 	dat <- dat[, c(1:2, 4, 53:ncol(dat))]
 	names(dat)[1:ncol(dat)] <- c("date", "time", "relTime", "A1", "A2", "A3", "A4", "A5", "A6", "B1", "B2", "B3", "B4", "B5", "B6", "C1", "C2", "C3", "C4", "C5", "C6", "D1", 
