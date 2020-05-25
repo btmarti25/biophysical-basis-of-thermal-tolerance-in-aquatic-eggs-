@@ -10,7 +10,7 @@ library(viridis)
 
 
 #write.csv(sumdat,'sumdat.csv')
-sumdat<-read.csv(file='~/Google Drive/Projects/ChinookEggExperiment/PNAS/Data/SurvivalToHatch.csv',header=T)
+sumdat<-read.csv(file='~/Google Drive/Projects/ChinookEggExperiment/Final/Data/SurvivalToHatch.csv',header=T)
 TreatmentID <-sumdat$TreatmentID
 splitdat<-split(sumdat, TreatmentID)
 ID<-0
@@ -60,7 +60,7 @@ cols<-c("#FE9261","#4AB78E","#5D1774")
 
 	
 
-dat<-read.csv(file='~/Google Drive/Projects/ChinookEggExperiment/PNAS/Data/survivaldata_QAQCed.csv')
+dat<-read.csv(file='~/Google Drive/Projects/ChinookEggExperiment/Final/Data/survivaldata_QAQCed.csv')
 mdat<-subset(dat,Category=="Mort")
 TreatmentN=mdat$RepNumber
 splitDat<-split(mdat,TreatmentN)
@@ -89,7 +89,7 @@ grid.arrange(p1, p2,ncol=2,widths=c(2,.75))
 
 
 ###
-parms<-read.csv(file='~/Google Drive/Projects/ChinookEggExperiment/PNAS/Data/BootStrappedParms.csv',header=F)
+parms<-read.csv(file='~/Google Drive/Projects/ChinookEggExperiment/Final/Data/BootStrappedParms.csv',header=F)
 
 k=mean(parms[,1])
 G=mean(parms[,2])
