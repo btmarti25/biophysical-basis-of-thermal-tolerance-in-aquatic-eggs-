@@ -1,7 +1,7 @@
 library(ggplot2)
 library(cowplot)
-dat<-read.csv(file='~/Google Drive/Projects/ChinookEggExperiment/PNAS/Data/mO2dat_for_model_fitting.csv',header=T)
-mod<-read.csv(file='~/Google Drive/Projects/ChinookEggExperiment/PNAS/Data/O2_model_preds_and_CI.csv',sep=";")
+dat<-read.csv(file='~/Google Drive/Projects/ChinookEggExperiment/Final/Data/mO2dat_for_model_fitting.csv',header=T)
+mod<-read.csv(file='~/Google Drive/Projects/ChinookEggExperiment/Final/Data/O2_model_preds_and_CI.csv',sep=";")
 
 ## Fig 1B
 ggplot()+geom_jitter(data=dat,aes(x= DO_conc,y= mo2,fill=factor(devStage)),width=.2,alpha=.6,shape=21,size=2)+facet_wrap(~temp,ncol=4)+
