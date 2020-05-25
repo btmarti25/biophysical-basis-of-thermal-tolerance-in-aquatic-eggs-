@@ -1,7 +1,7 @@
 library(ggplot2)
 library(cowplot)
 library(gridExtra)
-parms<-read.csv(file='~/Google Drive/Projects/ChinookEggExperiment/PNAS/Data/BootStrappedParms.csv',header=F)
+parms<-read.csv(file='~/Google Drive/Projects/ChinookEggExperiment/Final/Data/BootStrappedParms.csv',header=F)
 
 Co <-11
 k<-mean(parms[,1])
