@@ -1,5 +1,5 @@
 
-dat<-read.csv(file="~/Google Drive/Projects/ChinookEggExperiment/PNAS/Data/DO_distribution_data.csv")
+dat<-read.csv(file="~/Google Drive/Projects/ChinookEggExperiment/Final/Data/DO_distribution_data.csv")
 
 # calc mean O2 measurment for each sensory across time points
 aggdat<-aggregate(dat, by = list(Level=dat$Level, Location=dat $Location,in_out=dat$in_out,Tube=dat$Tube,temp=dat$temp), FUN = mean, na.rm = TRUE)
