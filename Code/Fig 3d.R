@@ -1,6 +1,6 @@
 library(ggplot2)
 library(viridis)
-Olim<-read.csv(file="~/Google Drive/Projects/ChinookEggExperiment/PNAS/Data/CFD_Olim.csv")
+Olim<-read.csv(file="~/Google Drive/Projects/ChinookEggExperiment/Final/Data/CFD_Olim.csv")
 
 aggOlim <- aggregate(Olim, by = list(Olim $temp,Olim$velocity), FUN = mean, na.rm = TRUE)
 
