@@ -7,7 +7,7 @@ library(cowplot)
 library(dplyr)
 library(tidyverse)
 library(cowplot)
-GravelSurvivalData <- read.csv(file = "~/Google Drive/Projects/ChinookEggExperiment/PNAS/Data/GravelSurvivalData.csv", header = T)
+GravelSurvivalData <- read.csv(file = "~/Google Drive/Projects/ChinookEggExperiment/Final/Data/GravelSurvivalData.csv", header = T)
 
 ## fit mixed model for survial as function of flow and temperature
 model <- glmer(cbind(survivors, morts) ~ factor(temp) * factor(flow) + (1 | Tube), family = binomial(link = logit), 
@@ -46,9 +46,9 @@ pSurvival <- ggplot() +
 
 
 ### sublethal plot
-dat <- read.csv(file = "~/Google Drive/Projects/ChinookEggExperiment/PNAS/Data/Alevin_lengths.csv")
+dat <- read.csv(file = "~/Google Drive/Projects/ChinookEggExperiment/Final/Data/Alevin_lengths.csv")
 aggLengthData <- aggregate(dat, by = list(dat$Tube), FUN = mean, na.rm = TRUE)
-tube <- read.csv(file = "~/Google Drive/Projects/ChinookEggExperiment/PNAS/Data/gravel_tudeIds.csv")
+tube <- read.csv(file = "~/Google Drive/Projects/ChinookEggExperiment/Final/Data/gravel_tudeIds.csv")
 comb <- merge(dat, tube, by = "Tube")
 combAgg <- merge(aggLengthData, tube, by = "Tube")
 
